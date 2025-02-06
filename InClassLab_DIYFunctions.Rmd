@@ -16,6 +16,13 @@ The questions from your notes today are below, please copy your answers them her
 1. Write your own function that takes the temperature in Fahrenheit as an argument and returns the Celcius equivalent. 
 
 ```{R}
+ function_sample <- function(firstname, lastname, hobby){
+  full_name_bio <- paste(firstname, lastname, hobby)
+  return(full_name_bio)
+}
+
+infoprint <- function_sample("Precious", "Merenu", ": I enjoy exercising and trying new things.")
+  print(infoprint)
 
 
 ```
