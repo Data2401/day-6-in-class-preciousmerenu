@@ -16,14 +16,13 @@ The questions from your notes today are below, please copy your answers them her
 1. Write your own function that takes the temperature in Fahrenheit as an argument and returns the Celcius equivalent. 
 
 ```{R}
- function_sample <- function(firstname, lastname, hobby){
-  full_name_bio <- paste(firstname, lastname, hobby)
-  return(full_name_bio)
+celcius = function(fahrenheit){
+  answer = (5/9) * (fahrenheit - 32)
+  answer 
 }
-
-infoprint <- function_sample("Precious", "Merenu", ": I enjoy exercising and trying new things.")
-  print(infoprint)
-
+ present_answer = celcius(52)
+ print(paste(present_answer, "degrees celcius."))
+ 
 
 ```
 
@@ -31,6 +30,17 @@ infoprint <- function_sample("Precious", "Merenu", ": I enjoy exercising and try
 
 
 ```{r}
+
+celcius_meters = function(fahrenheit, inches){
+  cel_answer = (5/9) * (fahrenheit - 32)
+  meters_answer = inches * 0.0254
+  return(list(celcius = cel_answer, meters = meters_answer))
+  
+}
+ present_answer = celcius_meters(52, 6)
+ 
+ print(paste(present_answer$celcius, "degrees celcius."))
+ print(paste(present_answer$meters, "degrees celcius."))
 
 
 ```
