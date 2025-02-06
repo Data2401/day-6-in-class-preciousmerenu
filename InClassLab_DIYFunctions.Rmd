@@ -1,6 +1,6 @@
 ---
 title: "In Class Lab - DIY Functions"
-author: "Dr. Shoemaker"
+author: "Precious Merenu"
 date: "DATA 2401"
 output: html_document
 ---
@@ -49,7 +49,22 @@ celcius_meters = function(fahrenheit, inches){
 3. Write a function that prints out a statement of whether the number passed as an argument is positive, negative or 0. 
 
 ```{R}
-
+pos_or_neg = function(num)
+{
+  if (num > 0) 
+    {
+  print("The answer you have entered is positive. Great job!")
+    }
+ else if (num < 0)
+    {
+  print("The answer you have entered is negative. Great job!")
+    }
+  else
+   {
+    print("The answer you have entered is zero. Great job!")
+   }
+}
+present_answer = pos_or_neg(0)
 
 ```
 
@@ -57,7 +72,23 @@ celcius_meters = function(fahrenheit, inches){
    + Don't use `abs()`. Use the flow from problem 1 and multiply by negative one as necessary. 
    
 ```{r}
-
+find_absolute_val = function(num)
+  {
+  if (num > 0) 
+    {
+  print(paste("The absolute value of the number is: ", num, ". Great job!"))
+    }
+ else if (num < 0)
+    {
+  print(paste("The absolute value of the number is: ", (num/-1), ". Great job!"))
+    }
+  else
+   {
+    print("The answer you have entered is zero and doesn't have an absolute value. Great job!")
+   }
+}
+  
+  present_answer= find_absolute_val(-5)
 
 ```
 
@@ -65,7 +96,31 @@ celcius_meters = function(fahrenheit, inches){
    + There are functions that check and return T/F: `is.numeric()` or `is.character()` would be relevant here
    
 ```{r}
-
+find_absolute_val = function(num)
+  {
+  if (is.numeric(num) == TRUE)
+    {
+  print(paste("Error!! Please pass a numerical value to this function. Try Again. "))
+    }
+  else if (is.character(num) == TRUE)
+    {
+  print(paste("Error!! Please pass a numerical value to this function. Try Again. "))
+    }
+  else if (num > 0) 
+    {
+  print(paste("The absolute value of the number is: ", num, ". Great job!"))
+    }
+ else if (num < 0)
+    {
+  print(paste("The absolute value of the number is: ", (num/-1), ". Great job!"))
+    }
+  else
+   {
+    print("The answer you have entered is zero and doesn't have an absolute value. Great job!")
+   }
+}
+  
+  present_answer= find_absolute_val("s")
 
 
 ```
